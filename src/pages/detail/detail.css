@@ -1,0 +1,86 @@
+.detail{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.petDetail {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+   
+    
+}
+
+.petDetail img {
+    max-width: 400px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 7px 29px 0 hsl(240deg 5% 41% / 20%);
+    max-height: 500px;
+}
+
+.petDetail-info {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.petDetail-info__name {
+    font-family: 'Coiny', cursive;
+    color: #de8ebe;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.petDetail-info span {
+    color: #444;
+    font-size: 14px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.pet-contact {
+    color: #de8ebe;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.pet-contact h3 {
+    border-bottom: 1px solid #de8ebe;
+    text-align: center;
+    font-size: 25px;
+}
+.pet-contact span {
+    padding: 0 10px
+}
+.btn-adoption {
+    align-self: center;
+    margin-top: 50px;
+    padding : 6px 40px;
+    border-radius: 10px;
+    border: 2px solid #de8ebe;
+    background-color: #fff;
+    color: #de8ebe;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 7px 29px 0 hsl(240deg 5% 41% / 20%);
+}
+
+.btn-adoption:hover {
+    background-color: #de8ebe;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px){
+   .petDetail {
+       flex-direction: column;
+   }
+   .petDetail img {
+       max-width: 100%;
+       padding: 0 10px;
+       max-height: 300px;
+   }
+}

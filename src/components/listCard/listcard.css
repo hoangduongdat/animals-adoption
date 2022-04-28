@@ -1,0 +1,7 @@
+.listcard {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+    row-gap: 50px;
+    justify-items: center;
+    margin-top: 50px;
+}

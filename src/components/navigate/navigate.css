@@ -1,0 +1,40 @@
+.navigate {
+    width: 100%;
+    padding: 8px 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.navigate a {
+    padding: 4px 8px;
+    width: 90px;
+    background-color: #fff;
+    border: 1px solid #de8ebe;
+    
+    font-size: 18px;
+    color: #de8ebe;
+    margin-right: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 7px 29px 0 hsl(240deg 5% 41% / 40%);
+    transition: all 0.5s ease;
+}
+
+.navigate a.active,.navigate a:hover {
+    background-color: #de8ebe;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px){
+    .navigate {
+        padding: 8px 10px;
+        justify-content: space-evenly;
+    }
+    .navigate a{
+        margin-bottom: 20px;
+        margin-right: 4px;
+    }
+}
