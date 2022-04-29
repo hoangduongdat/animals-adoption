@@ -25,7 +25,6 @@ const nav = [
 ]
 const Navigate = () => {
     const { pathname } = useLocation()
-    console.log(pathname)
     return (
         <div className="navigate">
             {

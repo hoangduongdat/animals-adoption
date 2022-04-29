@@ -4,14 +4,7 @@ import './footer.css'
 
 const Footer = () => {
     return (
-        <div className="footer">
-            {/* <div className="footer-waves">
-                <div className="footer-waves__wave" id="wave1"></div>
-                <div className="footer-waves__wave" id="wave2"></div>
-                <div className="footer-waves__wave" id="wave3"></div>
-                <div className="footer-waves__wave" id="wave4"></div>
-            </div> */}
-
+        <div className="footer" id="footer">
             <ul className="footer-social__icon">
                 <li><a href=""><i className='bx bxl-facebook-circle'></i></a></li>
                 <li><a href=""><i className='bx bxl-twitter' ></i></a></li>
