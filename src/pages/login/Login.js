@@ -14,7 +14,7 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (apiKey === apikeyInput && secret === secretInput) {
+        if (apiKey === apikeyInput.trim() && secret === secretInput.trim()) {
             const params = new URLSearchParams();
             params.append("grant_type", "client_credentials");
             params.append("client_id", apiKey);

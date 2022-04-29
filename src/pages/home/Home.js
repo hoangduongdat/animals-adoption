@@ -8,6 +8,7 @@ import Pagination from './../../components/pagination/Pagination';
 import Navigate from './../../components/navigate/Navigate';
 import { useLocation } from 'react-router-dom';
 import Loading from '../../components/loading/Loading';
+import GoToTop from '../../components/gototop/GoToTop';
 
 const Home = () => {
     const [pets, setPets] = useState([])
@@ -16,7 +17,12 @@ const Home = () => {
     const [totalPage, setTotalPage] = useState(20)
     const { accessToken } = useContext(authContext);
     const { pathname } = useLocation()
+    // /cat->cat
     const type = pathname.slice(1)
+
+    useEffect(() => {
+        setPage(1)
+    }, [pathname])
 
     useEffect(() => {
         if (accessToken === null) return;
@@ -50,19 +56,16 @@ const Home = () => {
                 <Navigate />
 
                 {isLoading ? <Loading /> : (
-                    (
-                        <>
-                            <ListCard pets={pets} />
-                        </>
-                    )
+                    <ListCard pets={pets} />
                 )}
+
                 <Pagination
                     totalPage={totalPage}
                     setPage={setPage}
                     page={page}
                 />
-
             </div>
+            <GoToTop />
         </div>
     );
 };

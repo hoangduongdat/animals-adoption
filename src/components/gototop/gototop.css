@@ -1,0 +1,32 @@
+.gototop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #de8ebe;
+    z-index: 99;
+    transition: background-color .2s ease-in-out
+}
+.gototop >i {
+    font-size: 25px;
+}
+@media screen and (max-width: 1024px) {
+    .gototop {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gototop {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.gototop.changeStyle{
+    color: #de8ebe;
+    background-color: #fff;
+}
