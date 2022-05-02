@@ -19,11 +19,8 @@ const Pagination = (props) => {
             if (item === range[0]) setIndexRange(indexRange - 4)
         }
         setPage(item + 1)
-        console.log(page)
     }
-
     const handleNextPage = () => {
-        console.log(page, range)
         if (page < totalPage) {
             if (page - range[4] >= 0) setIndexRange(indexRange + 4)
             setPage(page + 1)
@@ -31,7 +28,6 @@ const Pagination = (props) => {
     }
     const handlePrevPage = () => {
         if (page > 1) {
-
             if (page - range[1] <= 0 && page > 4) setIndexRange(indexRange - 4)
             setPage(page - 1)
         }

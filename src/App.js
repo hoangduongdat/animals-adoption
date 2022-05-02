@@ -20,14 +20,14 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={accessToken ? <Home /> : <Login />}>
+          <Route path="/" exact element={accessToken ? <Home /> : <Login />}>
             <Route path="/cat" element={<Home />} />
             <Route path="/dog" element={<Home />} />
             <Route path="/rabbit" element={<Home />} />
             <Route path="/bird" element={<Home />} />
           </Route>
-          <Route path="/animals/:id" element={accessToken ? <Detail /> : <Login />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/animals/:id" element={accessToken ? <Detail /> : <Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>
